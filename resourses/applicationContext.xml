@@ -12,7 +12,7 @@
 
     <bean id = "myPerson"
           class = "spring_introduction.Person">
-        <constructor-arg ref="myPet"></constructor-arg>
+            <property name="pet" ref="myPet"></property>
     </bean>
 
 </beans>
