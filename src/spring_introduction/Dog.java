@@ -1,10 +1,15 @@
 package spring_introduction;
 
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
-public class Dog implements Pet{
+@Scope("singleton")
+public class Dog implements Pet {
 
 //    private String name;
 //
@@ -21,16 +26,17 @@ public class Dog implements Pet{
     }
 
     @Override
-    public void say(){
+    public void say() {
         System.out.println("Bow-Wow");
     }
 
-    protected void init(){
-
-        System.out.println("Class Dog: ini method");
+    @PostConstruct
+    protected void init() {
+        System.out.println("Class Dog: init method");
     }
 
-    private void destroy(){
+    @PreDestroy
+    private void destroy() {
         System.out.println("Class Dog: destroy method");
     }
 }
