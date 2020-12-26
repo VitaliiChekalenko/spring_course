@@ -19,5 +19,6 @@ public class UniLibrary extends AbstractLibrary{
 
     public void getMagazine(){
         System.out.println("Мы берем журнал из UniLibrary");
+        System.out.println("");
     }
 }
