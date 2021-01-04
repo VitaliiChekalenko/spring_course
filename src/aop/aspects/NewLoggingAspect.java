@@ -17,6 +17,7 @@ public class    NewLoggingAspect {
         long begin = System.currentTimeMillis();
         Object targetMethodResult = proceedingJoinPoint.proceed();
         long end = System.currentTimeMillis();
+//        targetMethodResult = "Майн кампф";
         System.out.println( "aroundReturnBookLoggingAdvice: в библиотеку успешно вернули книгу");
         System.out.println("aroundReturnBookLoggingAdvice: метод returnBook віполнил работу за " + (end-begin) + " миллисекунд" );
         return targetMethodResult;
