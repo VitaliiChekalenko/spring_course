@@ -13,11 +13,13 @@ public class Test1 {
 
             Session session = factory.getCurrentSession();
 
-            Employee emp = new Employee("Vitalii", "Chekalenko", "It", 500);
+            Employee emp = new Employee("Alex", "Smirnov", "Sales", 700);
 
             session.beginTransaction();
             session.save(emp);
             session.getTransaction().commit();
+
+            System.out.println("Done!");
         }finally {
             factory.close();
         }
