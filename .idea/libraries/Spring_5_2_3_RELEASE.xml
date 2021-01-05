@@ -23,6 +23,7 @@
       <root url="jar://$PROJECT_DIR$/../aspectjweaver-1.9.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/aspectjweaver-1.9.6.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.annotation-api-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.22.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
