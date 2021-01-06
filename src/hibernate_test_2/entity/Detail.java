@@ -24,7 +24,7 @@ public class Detail {
     public Detail() {
     }
 
-    public Detail(int id, String city, String phoneNumber, String email) {
+    public Detail( String city, String phoneNumber, String email) {
         this.id = id;
         this.city = city;
         this.phoneNumber = phoneNumber;
