@@ -16,6 +16,12 @@ public class Section {
     @Column(name = "name")
     private String name;
 
+
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH, CascadeType.MERGE})
+    @JoinTable(
+            name = "child_section", joinColumns = @JoinColumn(name = "section_id"),
+            inverseJoinColumns = @JoinColumn(name = "child_id")
+    )
     private List<Child> children;
 
     public void addChildToSection(Child child){
@@ -26,6 +32,10 @@ public class Section {
     }
 
     public Section() {
+    }
+
+    public Section(String name) {
+        this.name = name;
     }
 
     public String getName() {
